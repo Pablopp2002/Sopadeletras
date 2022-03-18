@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopa de letras--Pablo Puentes</title>
+</head>
+<body>
+    <h1>Pablo Puentes Pérez | Sopa de letras</h1>
+		<h2 id = "instructions">Instrucciones: <p>Encontrar el mayor numero de palabras dentro de la sopa de letras en el menor tiempo posible</p></h2>
+		<h3 id = "themeIntro">El tema es: <span id = "wordTheme"></span></h3> 
+
+        <button id = "newGameButton" type = "button">Juego nuevo</button>
+		<div id = "wordboard"></div>
+		<div id = "wordlist"></div>
+		<button id = "solveButton" type = "button">Mostrar palabras</button>
+
+        <link rel = "stylesheet" type="text/css" href = "diseño.css">
+        <script src = https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
+
+		<script src = "js/wordpaths.js"></script>
+		<script src = "js/wordsearchcontroller.js"></script>
+		<script src = "js/wordsearchlogic.js"></script>
+		<script src = "js/wordsearchview.js"></script>
+
+        <script>	
+			$(document).ready( function() {
+				new WordSearchController("#wordboard", "#wordlist", "#solveButton", "#newGameButton", "#instructions", 
+					"#wordTheme");
+			})
+		</script>
+</body>
+</html>
